@@ -1,6 +1,6 @@
 import { describe, test, expect } from "vitest";
 
-const k = (x: any) => () => x;
+const k = <T>(x: T) => (): T => x;
 
 const output = k(42);
 console.log(output());
