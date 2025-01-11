@@ -40,4 +40,20 @@ describe("comparing arrays", () => {
   test("returns true when comparing two equal arrays", () => {
     expect(deepEquals([1, 2, 3], [1, 2, 3])).toEqual(true);
   });
+
+  test("returns true when comparing two nested arrays", () => {
+    expect(
+      deepEquals(
+        [
+          [1, 2],
+          [3, 4],
+        ],
+        [
+          [1, 2],
+          [3, 4],
+        ]
+      )
+    ).toEqual(true);
+  })
+
 });
