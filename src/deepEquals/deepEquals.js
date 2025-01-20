@@ -12,6 +12,18 @@ export function deepEquals(x, y) {
     });
   }
 
+  if (typeof x === "object" && typeof y === "object") {
+    const xKeys = Object.keys(x);
+    const yKeys = Object.keys(y);
+
+    if (xKeys.length !== yKeys.length) {
+      return false;
+    }
+
+    return xKeys.every((key) => {
+      return deepEquals(x[key], y[key]);
+    });
+  }
+
   return x === y;
 }
-

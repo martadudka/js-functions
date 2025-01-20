@@ -57,3 +57,63 @@ describe("comparing arrays", () => {
   })
 
 });
+
+describe("comparing objects", () => {
+  test("returns true when comparing two equal objects", () => {
+    expect(
+      deepEquals(
+        { drink: "coke", meal: "hamburger" },
+        { drink: "coke", meal: "hamburger" }
+      )
+    ).toEqual(true);
+  });
+
+  test("returns false when comparing different objects", () => {
+    expect(
+      deepEquals(
+        { drink: "coffee", meal: "cheesecake" },
+        { drink: "coffee", dessert: "cheesecake" }
+      )
+    ).toEqual(false);
+  });
+
+  test("returns false when comparing objects with different keys", () => {
+    expect(
+      deepEquals(
+        { drink: "coke", meal: "hamburger" },
+        { drink: "coffee", meal: "cheesecake" }
+      )
+    ).toEqual(false);
+  });
+
+  test("returns true when comparing equal nested objects", () => {
+    expect(
+      deepEquals(
+        {
+          drink: "coke",
+          meal: { mainCourse: "hamburger", dessert: "cheesecake" },
+        },
+        {
+          drink: "coke",
+          meal: { mainCourse: "hamburger", dessert: "cheesecake" },
+        }
+      )
+    ).toEqual(true);
+  });
+
+  test("returns false when comparing different nested objects", () => {
+    expect(
+      deepEquals(
+        {
+          drink: "coke",
+          meal: { mainCourse: "hamburger", dessert: "cheesecake" },
+        },
+        {
+          drink: "coffee",
+          meal: { mainCourse: "omelette", dessert: "cheesecake" },
+        }
+      )
+    ).toEqual(false);
+  });
+
+});
