@@ -54,8 +54,7 @@ describe("comparing arrays", () => {
         ]
       )
     ).toEqual(true);
-  })
-
+  });
 });
 
 describe("comparing objects", () => {
@@ -84,6 +83,14 @@ describe("comparing objects", () => {
         { drink: "coffee", meal: "cheesecake" }
       )
     ).toEqual(false);
+  });
+
+  test("returns true when comparinf two empty objects", () => {
+    expect(deepEquals({}, {})).toEqual(true);
+  });
+
+  test("returns false when comparing two objects and one of them is empty", () => {
+    expect(deepEquals({ drink: "coke", meal: "hamburger" }, {})).toEqual(false);
   });
 
   test("returns true when comparing equal nested objects", () => {
@@ -115,5 +122,4 @@ describe("comparing objects", () => {
       )
     ).toEqual(false);
   });
-
 });
