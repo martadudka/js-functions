@@ -1,6 +1,6 @@
 export function someMethod(arr, fn) {
-  for(let i = 0; i < arr.length; i++) {
-    if (fn(arr[i])) {
+  for(const element of arr) {
+    if (fn(element)) {
       return true;
     }
   }
