@@ -31,5 +31,15 @@
         alert("slow button");
       }, 500);
     });
+
+    function dumbestSortAlgorithm(arr) {
+      for (let num of arr) {
+        setTimeout(() => {
+          console.log(num);
+        }, num);
+      }
+    }
+    const arr = [2, 5, 10, 7];
+    dumbestSortAlgorithm(arr);
   </script>
 </html>
