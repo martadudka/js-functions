@@ -1,22 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <button id="alert-button">click me!</button>
-</body>
-<script>
+    <button id="fast-button">I'm fast!</button>
+    <button id="slow-button">I'm slow!</button>
+  </body>
+  <script>
     const alertButton = document.getElementById("alert-button");
     alertButton.addEventListener("click", () => {
-        alert("Hello");
-        setTimeout(() => {
-            alert("slow Hello");
-        }, 1000)
-        alert("Hello again");
-    })
-    
-</script>
+      alert("Hello");
+      setTimeout(() => {
+        alert("slow Hello");
+      }, 1000);
+      alert("Hello again");
+    });
+
+    const fastButton = document.getElementById("fast-button");
+    fastButton.addEventListener("click", () => {
+      alert("fast button");
+    });
+
+    const slowButton = document.getElementById("slow-button");
+    slowButton.addEventListener("click", () => {
+      setTimeout(() => {
+        alert("slow button");
+      }, 500);
+    });
+  </script>
 </html>

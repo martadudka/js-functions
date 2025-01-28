@@ -18,7 +18,7 @@ export function arrayMin<T>(
 }
 
 arrayMin([2, 3, 5]);
-arrayMin(["dog", "horse", "ponny"]);
+arrayMin(["dog", "horse", "pony"]);
 arrayMin([]);
 
 // condition ? expression_if_true : expression_if_false;

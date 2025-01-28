@@ -15,6 +15,6 @@ it("returns undefined if the array is empty", () => {
 });
 
 it("returns the minimum string by length", () => {
-  expect(arrayMin(["dog", "horse", "ponny"])).toBe("dog");
+  expect(arrayMin(["dog", "horse", "pony"])).toBe("dog");
 })
 });

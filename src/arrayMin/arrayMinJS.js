@@ -14,7 +14,7 @@ const arrayMin = (arr, compareFunction) => {
 }
 
 arrayMin([2, -3, 5]);
-arrayMin(["dog", "horse", "ponny"]);
+arrayMin(["dog", "horse", "pony"]);
 arrayMin([]);
 
 // function arrayMin(arr, compareFunction) {
