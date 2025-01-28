@@ -11,6 +11,12 @@
     <button id="slow-button">I'm slow!</button>
   </body>
   <script>
+    
+    alert("Hello");
+    setTimeout(() => {
+      alert("World");
+    }, 1000);
+
     const alertButton = document.getElementById("alert-button");
     alertButton.addEventListener("click", () => {
       alert("Hello");
