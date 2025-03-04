@@ -35,7 +35,7 @@
     let slowButtonTimeoutId;
 
     slowButton.addEventListener("click", () => {
-      if (slowButtonTimeoutId) {
+      if (slowButtonTimeoutId !== undefined) {
         clearTimeout(slowButtonTimeoutId);
       }
 
