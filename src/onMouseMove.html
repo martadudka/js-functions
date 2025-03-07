@@ -15,18 +15,20 @@
     </style>
   </head>
   <body>
+    <h1 class="country">Italy</h1>
     <div class="flag">🇮🇹</div>
 
     <script>
       const italianFlag = document.querySelector(".flag");
+      const country = document.querySelector(".country");
 
-      document.addEventListener("mousemove", (event) => {
+      country.addEventListener("mousemove", (event) => {
         italianFlag.style.visibility = "visible";
         italianFlag.style.top = event.clientY + 10 + "px";
         italianFlag.style.left = event.clientX + 10 + "px";
       });
 
-      document.addEventListener("mouseleave", (event) => {
+      country.addEventListener("mouseleave", (event) => {
         italianFlag.style.visibility = "hidden";
       });
     </script>
